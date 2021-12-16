@@ -1,5 +1,20 @@
 %h1 All Users
-%div
-  %p
-    - @artist.each do |artist|
-        %h1= artist.name
+
+%table
+  %thead
+    %tr
+      %th Grade
+      %th Content
+      %th User
+      %th
+      %th
+      %th
+
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.email
+        %td= user.name
+        %td= user.job_role
+
+%br
